@@ -1,18 +1,18 @@
-  const dbd = require("dbd.js")
- 
-const bot = new dbd.Bot({
+const Aoijs = require("aoi.js")
+
+const bot = new Aoijs.Bot({
 token: "ODQxMzUyMDA4ODI5MzcwMzY4.YJlgHg.Ka1HjQ5ge68-mWBGYQEXi4vrwjI", 
-prefix: "$getServerVar[prefix]", 
+prefix: "!"
 })
 
 
-bot.onMessage()
- 
 bot.command({
 name: "ping", 
-code: `Pong! \`$ping\` ms` 
-
+code: `$ping Pong!` 
 })
+
+
+
 
 bot.status({
  
@@ -104,3 +104,4 @@ $onlyIf[$getServerVar[suggestchannel]!=;This server has no suggest channel run *
 $onlyIf[$getServerVar[suggest_system]==true;Suggest system is not enabled!]
  `
  });
+
